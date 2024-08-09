@@ -1,5 +1,10 @@
 
 # India Population Census 2011 Analysis
+![im](https://github.com/user-attachments/assets/451dbefc-7e52-4c8f-bf15-44150b1c951d)
+
+## Contents
+
+#L INTRODUCTION
 
 ## INTRODUCTION
 
