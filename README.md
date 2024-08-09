@@ -191,10 +191,13 @@ limit 10;
 ```
 
 o Bottom 10 states by population
+
+```mysql
 select state, round(Avg(sex_ratio)) Average_Sex_Ratio from census
 group by state
 order by Average_Sex_Ratio
 limit 10;
+```
 
 o PRVIOUS YEAR POPULATION
 
@@ -206,7 +209,7 @@ select district, state, round((Population/(growth+1))) Population_Before, popula
 order by state;
 ```
 
--- Males and females of states according to Census 2011
+o Males and females of states according to Census 2011
 
 ```mysq
 with cte as(select c.district,
