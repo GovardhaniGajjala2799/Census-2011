@@ -226,7 +226,7 @@ order by state;
 
 o Males and females of states according to Census 2011
 
-```mysq
+```mysql
 with cte as(select c.district,
 c.state, c.sex_ratio/1000 as sex_ratio1, g.population 
 from census c join 
@@ -244,6 +244,7 @@ Tools Used⚙️:Microsoft Power BI
 
 ![1](https://github.com/user-attachments/assets/cde6eca5-789f-4342-8860-a232bec0a85d)
 
+For a live dashboard click [https://app.powerbi.com/links/GFlC6GkXU_?ctid=bebe13a2-129d-46e7-bb07-0f8397dd3379&pbi_source=linkShare&bookmarkGuid=c9c7b6f3-d9f8-4185-9535-f9dc8a74b2ed]
 
 ## Descriptive Analysis(Findings)
 
