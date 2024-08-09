@@ -19,15 +19,18 @@ Visualization: Microsoft Power BI
 Tools Used🛠️: Microsoft Excel
 
 o Checked and formatted the cells with proper datatypes
+
 ![Screenshot (23)](https://github.com/user-attachments/assets/1b3f0efe-60c5-4938-9b52-7bf16b197157)
 
 Missing Values in each column
 o used filter function in excel to identify missing/null values
-![Screenshot (37)](https://github.com/user-attachments/assets/32ba17a1-b50e-401e-86b8-8feaa4c7cc92)
+
+![Screenshot (37)](https://github.com/user-attachments/assets/1d81baf4-6432-40d1-950e-330d947a0485)
 
 o identifing Duplicates
 o Handling the missing values by using find & select inbuilt function in excel
 1. Replaced the blank space with NULL for the column that is TEXT Datatype
+
 ![Screenshot (24)](https://github.com/user-attachments/assets/51f3f1f7-78a1-47b3-a4b0-21eaaa788219)
 
 ## Data Analysis 📈
@@ -63,14 +66,7 @@ SELECT * from census;
 
 SELECT * from Geograph;
 ```
-
- ## Total Columns
- 
-```mysql
-Select * from geograph;
-
-select * from census;
-```
+![fd](https://github.com/user-attachments/assets/518a3fe0-52c2-4eae-a3b5-439c2cc33d54)
 
 o Total Number of rows
 
@@ -85,6 +81,7 @@ o Total Districts
 ```mysql
 Select Count(distinct(District)) Total_Districts from census;
 ```
+![Screenshot (26)](https://github.com/user-attachments/assets/dbf6f070-b0cd-4243-bf84-92c9ee28c4a0)
 
 o Total States
 
@@ -106,6 +103,7 @@ o Average literacy rate of India
 with cte as (select round(avg(literacy)) literacy_of_India from census group by state)
 select round(avg(literacy_of_India),2) from cte;
 ```
+![th](https://github.com/user-attachments/assets/c32e46cf-1a91-4fdd-ba19-bafc25916eae)
 
 o Average Sex Ratio
 
@@ -173,6 +171,7 @@ group by state
 order by growth desc
 limit 5;
 ```
+![gro](https://github.com/user-attachments/assets/6e906a24-d410-4f10-8cb2-77fc22d56aa6)
 
 o Bottom 5 states by gowth rate
 
@@ -194,17 +193,9 @@ group by state
 order by population desc
 limit 10;
 ```
+![pop](https://github.com/user-attachments/assets/33603f95-b8a1-4dfb-ad65-a37ba14b1308)
 
 o Top 10 states by sex ratio
-
-```mysql
-select state, round(Avg(sex_ratio)) Average_Sex_Ratio from census
-group by state
-order by Average_Sex_Ratio desc
-limit 10;
-```
-
-o Bottom 10 states by population
 
 ```mysql
 select state, round(Avg(sex_ratio)) Average_Sex_Ratio from census
@@ -212,16 +203,21 @@ group by state
 order by Average_Sex_Ratio
 limit 10;
 ```
+![topsexratio](https://github.com/user-attachments/assets/1395171f-9203-4416-b1c4-50b3f5a13138)
 
 o PRVIOUS YEAR POPULATION
 
 ```mysql
 with cte as (select c.District, c.state, c.Growth, g.population 
-from census c join geograph g 
+from census c 
+join geograph g 
 on c.district = g.District)
-select district, state, round((Population/(growth+1))) Population_Before, population Population_After from cte
+select state, sum(round((Population/(growth+1)))) Population_Before, sum(population) Population_After 
+from cte 
+group by state
 order by state;
 ```
+![bfrpop](https://github.com/user-attachments/assets/3211057a-a38f-4b90-af99-4c3530f2e47c)
 
 o Males and females of states according to Census 2011
 
@@ -236,6 +232,7 @@ round((population * sex_ratio1)/(sex_ratio1 +1),0) as females from cte order by 
 select state, sum(males) as population_male, sum(females) as population_females from cte2 
 group by state;
 ```
+![Male and Female1](https://github.com/user-attachments/assets/f5931c0a-fe1a-4777-8be9-14a74cb4a5a2)
 
 ### Descriptive Analysis
 
