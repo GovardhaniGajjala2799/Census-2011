@@ -2,10 +2,6 @@
 # India Population Census 2011 Analysis
 ![im](https://github.com/user-attachments/assets/451dbefc-7e52-4c8f-bf15-44150b1c951d)
 
-## Contents
-
-#L INTRODUCTION
-
 ## INTRODUCTION
 
 The 2011 Census of India is a comprehensive dataset that provides a wealth of information on the demographic, social, and economic characteristics of the country. As a decennial exercise, the Census serves as a crucial benchmark for measuring India's progress and development across various indicators. This project aims to leverage the insights gleaned from the 2011 Census data to generate actionable intelligence that can inform policymaking, resource allocation, and strategic planning at the national and subnational levels.
